@@ -1,0 +1,35 @@
+﻿<Page x:Class="Diplom.PageManager"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Diplom"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1030"
+      Title="PageManager">
+
+    <Grid Background="Gray" Margin="0,0,-14,-14">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="101*"/>
+            <ColumnDefinition Width="192*"/>
+            <ColumnDefinition Width="107*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="98*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="82*"/>
+            <RowDefinition Height="21*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0" Grid.Column="0" Source="Image/logo1.jpg" Grid.ColumnSpan="2" Margin="0,0,501,2"/>
+        <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="36" Height="40" Width="110">Меню</TextBlock>
+        <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="1" FontSize="16" Click="Button_Click" RenderTransformOrigin="0.526,0.048" Width="329" Height="40">Клиенты</Button>
+        <Button Grid.Column="1"  VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="2" FontSize="16" Click="Button_Click_1" Width="329" Height="40">Заказы</Button>
+        <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="3" FontSize="16" Click="Button_Click_2" Width="329" Height="40">Склад</Button>
+        <Button Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Row="4" FontSize="16" Click="Button_Click_3" Width="329" Height="40">Заявки на изготовление</Button>
+
+
+
+    </Grid>
+</Page>

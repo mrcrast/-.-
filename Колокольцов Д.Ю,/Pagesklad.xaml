@@ -1,0 +1,44 @@
+﻿<Page x:Class="Diplom.Pagesklad"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Diplom"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="1030"
+      Title="Pagesklad">
+
+    <Grid Background="Gray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="171*"/>
+            <ColumnDefinition Width="629*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="64*"/>
+            <RowDefinition Height="67*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20" Height="26" Width="78">Склад</TextBlock>
+        <Image Grid.Row="0" Grid.Column="0" Source="Image/logo1.jpg" Margin="0,0,2,60" Grid.RowSpan="2"/>
+        <Button Grid.Row="1" Grid.Column="0" Margin="12,17,12,10" FontSize="16" Click="btnx_Click1" >Добавить</Button>
+        <Button Grid.Row="2" Grid.Column="0" Margin="12,17,12,10" FontSize="16" Click="btnx_Save1" >Сохранить</Button>
+        <Button Grid.Row="5" Grid.Column="0" Margin="12,17,12,10" FontSize="16" Click="btnx_Back1" >Назад</Button>
+        <Button Grid.Row="4" Grid.Column="0" Margin="12,17,12,10" FontSize="16" Click="btnx_Delete1" >Удалить</Button>
+        <Button Grid.Row="3" Grid.Column="0" Margin="12,17,12,10" FontSize="16" Click="btnx_Edit1" >Редактировать</Button>
+
+        <DataGrid Grid.Row="1" Grid.Column="1" Grid.RowSpan="4" Name="DataGridSklad" AutoGenerateColumns="False" ItemsSource="{Binding}" Cursor="Hand" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Код номенклатуры" Binding="{Binding Код_номенклатуры, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding Наименование, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Количество" Binding="{Binding Количество_на_складе, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Стоимость" Binding="{Binding Стоимость, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+
+    </Grid>
+</Page>
